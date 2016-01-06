@@ -1,4 +1,4 @@
-//Websocket = new WebSocket("ws://localhost:8000/test");
+Websocket = new WebSocket("ws://200.126.23.107:8000/");
 // Websocket = new WebSocket("ws://10.43.48.75/test");
 StudentFactorsChart = 0;
 CoursesFactorsChart = 0;
@@ -61,9 +61,9 @@ $(document).ready(function() {
     if (Websocket.readyState == 3) {
       $("#paperToast").attr("text","Connection lost, reconnecting...");
       document.querySelector('#paperToast').show();
-      //Websocket = new WebSocket("ws://localhost:8000/test");
+      Websocket = new WebSocket("ws://200.126.23.107:8000/");
       // Websocket = new WebSocket("ws://franciscogutierrez10-80.terminal.com/test");
-      Websocket = new WebSocket("wss://franciscogutierrez11-80.terminal.com/test");
+      //Websocket = new WebSocket("wss://franciscogutierrez11-80.terminal.com/test");
       Websocket.onopen    = function(evt) { onOpen(evt)   };
       Websocket.onclose   = function(evt) { onClose(evt)  };
       Websocket.onmessage = function(evt) { onMessage(evt)};
